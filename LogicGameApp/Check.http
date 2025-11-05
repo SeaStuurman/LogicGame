@@ -1,0 +1,12 @@
+# For more info on HTTP files go to https://aka.ms/vs/httpfile
+fetch('http://localhost:5172/Game/Check', {
+      method: 'PUT',
+      body: JSON.stringify(
+        ["Red","Blue","Green","White"]
+      ),
+      headers: {
+        "Content-type": "application/json; charset=UTF-8"	
+      }
+    })
+    .then(response => response.json())
+    .then(json => console.log(json))

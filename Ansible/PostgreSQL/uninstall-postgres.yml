@@ -1,0 +1,20 @@
+- hosts: all
+  become: yes
+
+  vars_files:
+    - vars.yml
+
+  tasks:
+    - name: Remove PostgreSQL
+      become: yes
+      become_user: postgres
+      postgresql_db:
+        name: "{{ db_name }}"
+        state: absent
+
+    - name: Remove PostgreSQL user
+      become: yes
+      become_user: postgres
+      postgresql_user:
+        user: "{{ db_user }}"
+      state: absent

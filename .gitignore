@@ -1,0 +1,11 @@
+################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/LogicGameApp/.vs/*
+/LogicGameApp/bin/*
+/LogicGameApp/obj/*
+/LogicAutoGamer/bin/*
+/LogicAutoGamer/obj/*
+
+
