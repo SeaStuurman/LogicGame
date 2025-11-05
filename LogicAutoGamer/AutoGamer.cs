@@ -43,7 +43,7 @@ namespace LogicAutoGamer
 			}
 			if (initState)
 			{
-				Console.WriteLine("* * * *");
+				Console.WriteLine("0\t* * * *");
 				return true;
 			}
 			else
@@ -74,10 +74,12 @@ namespace LogicAutoGamer
 			if (state)
 			{
 				bool win = false;
+				int step = 1;
 				while (!win)
 				{
 					var set = GetSet().ToArray();
-					Console.Write($"{set[0]} {set[1]} {set[2]} {set[3]}\t");
+					Console.Write($"{step}\t{set[0]} {set[1]} {set[2]} {set[3]}\t");
+					step++;
 					int checkEst = 0;
 					try
 					{
@@ -93,7 +95,7 @@ namespace LogicAutoGamer
 					if (checkEst == 4)
 					{
 						Console.WriteLine("Победа!");
-						break;
+						win = true;
 					}
 				}
 			}

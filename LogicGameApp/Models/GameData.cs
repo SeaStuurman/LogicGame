@@ -17,7 +17,7 @@ namespace LogicGameApp.Models
 			colors.Add("Blue", Color.Blue);
 			colors.Add("Black", Color.Black);
 			colors.Add("White", Color.White);
-			colors.Add("Yellow", Color.Yellow);
+			colors.Add("Yell", Color.Yellow);
 		}
 
 		public static GameData GetGameData()
