@@ -1,0 +1,5 @@
+# Создать Docker image.
+docker build . -t logic-gamer
+
+# Запустить контейнер
+docker run --name gamer logic-gamer -rm
