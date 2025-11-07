@@ -3,4 +3,3 @@ docker build . -t logic-gamer
 
 # Запустить контейнер
 docker run --name gamer logic-gamer -rm
-docker run --network host --name gamer logic-gamer -rm
