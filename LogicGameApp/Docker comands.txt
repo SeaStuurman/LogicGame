@@ -1,6 +1,7 @@
 # Создать Docker image.
-docker build . -t logic-gamer
+docker build . -t logic-server
 
 # Запустить контейнер
 docker run -p 8088:8080 --name logic logic-server -rm
+docker run --name logic logic-server -rm
 curl http://172.17.0.2:8080/Game/NewGame
