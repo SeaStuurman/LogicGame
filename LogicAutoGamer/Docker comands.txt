@@ -2,5 +2,4 @@
 docker build . -t logic-gamer
 
 # Запустить контейнер
-docker run -p 8088:8080 --name logic logic-server -rm
-curl http://172.17.0.2:8080/Game/NewGame
+docker run --name gamer logic-gamer -rm
