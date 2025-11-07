@@ -27,4 +27,5 @@ RUN dotnet publish "./LogicAutoGamer.csproj" -c $BUILD_CONFIGURATION -o /app/pub
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+ENV LOGIC_GAME_HTTP="http://192.168.1.2:8088/Game/"
 ENTRYPOINT ["dotnet", "LogicAutoGamer.dll"]

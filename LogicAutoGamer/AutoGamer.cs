@@ -19,7 +19,8 @@ namespace LogicAutoGamer
 		{
 			rnd = new Random((int)DateTime.Now.Ticks);
 			httpClient = new HttpClient();
-			httpClient.BaseAddress = new Uri("http://localhost:5172/Game/");
+			var addr = Environment.GetEnvironmentVariable("LOGIC_GAME_HTTP") ?? "http://localhost:5172/Game/";
+			httpClient.BaseAddress = new Uri(addr);
 			httpClient.Timeout = new TimeSpan(0, 0, 10);
 		}
 
