@@ -3,10 +3,6 @@
     "Name": "New Profile",
     "Projects": [
       {
-        "Path": "..\\LogicAutoGamer\\LogicAutoGamer.csproj",
-        "Action": "Start"
-      },
-      {
         "Path": "LogicGameApp.csproj",
         "Action": "Start"
       }

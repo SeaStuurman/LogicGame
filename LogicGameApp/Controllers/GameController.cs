@@ -1,6 +1,5 @@
 using LogicGameApp.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.OpenApi.Models;
 
 namespace LogicGameApp.Controllers
 {
@@ -16,14 +15,12 @@ namespace LogicGameApp.Controllers
 			return GameData.GetGameData().Colors.Keys.ToArray();
 		}
 
-		//[HttpGet]
 		public string[] NewGame()
 		{
 			var colorKeys = GameData.GetGameData().Colors.Keys.ToArray();
 			return new string[] { colorKeys[0], colorKeys[1], colorKeys[2], colorKeys[3] };
 		}
 
-		//[HttpPut]
 		public int Check([FromBody] string[] set)
 		{
 			var originalSet = NewGame();

@@ -4,7 +4,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddSwaggerGen(c =>
 {
@@ -31,21 +30,21 @@ if (app.Environment.IsDevelopment())
 		options.RoutePrefix = "swagger";
 	});
 }
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+};
 app.UseHttpsRedirection();
 app.UseRouting();
 
 //app.UseAuthorization();
 
 app.MapStaticAssets();
-
 app.MapControllerRoute(
 	name: "default",
 	pattern: "{controller=Home}/{action=Index}/{id?}")
 	.WithStaticAssets();
-//app.MapControllerRoute(
-//    name: "NewGame",
-//    pattern: "{controller=Game}/{action=NewGame}")
-//    .WithStaticAssets();
-
 
 app.Run();

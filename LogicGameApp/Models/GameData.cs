@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Drawing;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.OpenApi;
 
 namespace LogicGameApp.Models
 {
